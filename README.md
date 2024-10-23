@@ -23,7 +23,7 @@ The `PasswordValidatorTester` class serves as the main entry point of the applic
 
 Students are expected to:
 
-0. Form a team of minimal 2 maximal 3 person. Every deliverable below must be the result of a group work.
+0. Form a team of minimal 2 maximal 3 persons. Every deliverable below must be the result of a group work.
 1. Each team will implement the `PasswordValidator` interface by creating their own validation class (e.g., `PasswordLengthValidator`) that adheres to specific criteria they can invent.
 2. Include the implementation in a JAR file.
 3. Provide a description of the validation criteria used in their implementation.

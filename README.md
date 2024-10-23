@@ -1,9 +1,3 @@
-# password-validator
-
-Here’s a sample README for the GitHub repository for the password-validator project:
-
----
-
 # Password Validator
 
 ## Overview

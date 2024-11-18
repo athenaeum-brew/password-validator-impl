@@ -1,0 +1,26 @@
+package com.cthiebaud.passwordvalidator;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+/**
+ * Unit tests for PasswordLengthValidator.
+ */
+class PasswordLengthValidatorTest {
+
+    private final PasswordValidator validator = new PasswordLengthValidator();
+
+    @Test
+    void testValidPassword() {
+        ValidationResult result = validator.validate("validPassword123");
+        assertTrue(result.isValid());
+        assertEquals("Password length is valid.", result.message());
+    }
+
+    @Test
+    void testInvalidPassword() {
+        ValidationResult result = validator.validate("short");
+        assertFalse(result.isValid());
+        assertEquals("Password must be longer than 8 characters.", result.message());
+    }
+}

@@ -50,7 +50,16 @@ password-validator/
 ```
 
 ## Dependencies
-This project does not rely on any external libraries.
+This project depends on the password-validator library.
+
+
+```xml
+<dependency>
+    <groupId>com.cthiebaud</groupId>
+    <artifactId>password-validator</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+</dependency>
+```
 
 ## License
 This project is licensed under the MIT License.

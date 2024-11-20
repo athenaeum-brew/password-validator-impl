@@ -1,7 +1,7 @@
 # Password Length Validation
 
 ## Overview
-This project provides an implementation of the `PasswordValidator` interface, specifically a validator that checks whether a password is longer than 8 characters.
+This project provides a reference implementation of the `PasswordValidator` interface, specifically a validator that checks whether a password is longer than 8 characters.
 
 ## Implementation
 
@@ -61,9 +61,56 @@ This project depends on the password-validator library.
 </dependency>
 ```
 
-## License
-This project is licensed under the MIT License.
+## Information required in pom.xml
 
----
+### scm
 
-Feel free to modify any sections as needed to fit your project specifics!
+```xml
+<scm>
+    <url>https://github.com/athenaeum-brew/password-validator-impl</url>
+    <connection>scm:git:https://github.com/athenaeum-brew/password-validator-impl.git</connection>
+    <developerConnection>scm:git:git@github.com:athenaeum-brew/password-validator-impl.git</developerConnection>
+    <tag>HEAD</tag>
+</scm>
+```
+
+### developers
+
+```xml
+<developers>
+    <developer>
+        <id>cthiebaud</id>
+        <name>Christophe Thiebaud</name>
+        <email>christophe.t60@gmail.com</email>
+        <url>https://github.com/cthiebaud</url>
+    </developer>
+</developers>
+```
+
+### distributionManagement
+
+```xml
+<distributionManagement>
+    <repository>
+        <id>github-repo</id>
+        <url>https://maven.pkg.github.com/athenaeum-brew/maven-repo</url>
+    </repository>
+</distributionManagement>
+```
+
+### repositories
+
+```xml
+<repositories>
+    <repository>
+        <id>github-repo</id>
+        <url>https://maven.pkg.github.com/athenaeum-brew/maven-repo</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+    </repository>
+</repositories>
+```

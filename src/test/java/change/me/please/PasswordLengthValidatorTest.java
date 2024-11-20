@@ -1,7 +1,8 @@
-package com.cthiebaud.passwordvalidator;
+package change.me.please;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import com.cthiebaud.passwordvalidator.*;
 
 /**
  * Unit tests for PasswordLengthValidator.

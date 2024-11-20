@@ -1,4 +1,6 @@
-package com.cthiebaud.passwordvalidator;
+package change.me.please;
+
+import com.cthiebaud.passwordvalidator.*;
 
 /**
  * The {@code PasswordLengthValidator} class is an implementation of the

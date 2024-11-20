@@ -11,6 +11,22 @@
 
     <name>password-validator-impl</name>
 
+    <developers>
+        <developer>
+            <id>cthiebaud</id>
+            <name>Christophe Thiebaud</name>
+            <email>christophe.t60@gmail.com</email>
+            <url>https://github.com/cthiebaud</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/athenaeum-brew/password-validator-impl</url>
+        <connection>scm:git:https://github.com/athenaeum-brew/password-validator-impl.git</connection>
+        <developerConnection>scm:git:git@github.com:athenaeum-brew/password-validator-impl.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
     <properties>
         <!-- miscellaneous -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

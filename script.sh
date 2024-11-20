@@ -2,13 +2,13 @@
 
 # <groupId>com.cthiebaud</groupId>
 # <artifactId>password-validator</artifactId>
-# <version>1.0-SNAPSHOT</version>
+# <version>1.0.0-SNAPSHOT</version>
 
 # Define paths
 TARGET_DIR="target"
 GROUP_ID="com.cthiebaud"
 ARTIFACT_ID="password-validator"
-VERSION="1.0-SNAPSHOT"
+VERSION="1.0.0-SNAPSHOT"
 
 # Create a JAR name with groupId included, using '-' as a separator
 OUTPUT_JAR="$TARGET_DIR/${GROUP_ID//./-}-$ARTIFACT_ID-$VERSION.jar"

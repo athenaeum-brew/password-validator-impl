@@ -14,7 +14,7 @@ import com.cthiebaud.passwordvalidator.*;
  * is invalid.
  * </p>
  *
- * <h3>Usage Example:</h3>
+ * <h2>Usage Example:</h2>
  * 
  * <pre>{@code
  * PasswordValidator validator = new PasswordLengthValidator();

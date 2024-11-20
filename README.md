@@ -1,4 +1,4 @@
-# Password Length Validation
+# Password Length Validation reference implementation
 
 ## Overview
 This project provides a reference implementation of the `PasswordValidator` interface, as defined [here](https://github.com/athenaeum-brew/password-validator), specifically a validator that checks whether a password is longer than 8 characters.

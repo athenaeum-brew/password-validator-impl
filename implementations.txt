@@ -39,3 +39,46 @@ com.niklas3852:lefortknox:2.0-SNAPSHOT
 <version>1.1-RELEASE</version>
 
 com.cthiebaud:password-checker:1.1-RELEASE
+
+
+----
+<dependency>
+  <groupId>com.cthiebaud</groupId>
+  <artifactId>password-checker</artifactId>
+  <version>1.10-RELEASE</version>
+</dependency>
+
+com.cthiebaud:password-checker:1.10-RELEASE
+
+
+---
+
+<dependency>
+  <groupId>com.kevalbra</groupId>
+  <artifactId>sonatesecure</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</dependency>
+
+com.kevalbra:sonatesecure:1.0-SNAPSHOT
+
+
+----
+
+<dependency>
+  <groupId>com.timeliassoeren</groupId>
+  <artifactId>password-checker</artifactId>
+  <version>1.10.1-RELEASE</version>
+</dependency>
+
+com.timeliassoeren:password-checker:1.10.1-RELEASE
+\
+
+---
+
+<dependency>
+  <groupId>com.diepoe</groupId>
+  <artifactId>securitease</artifactId>
+  <version>1.0.1-PRERELEASE</version>
+</dependency>
+
+com.diepoe:securitease:1.0.1-PRERELEASE

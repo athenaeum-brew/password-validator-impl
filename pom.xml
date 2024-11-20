@@ -27,21 +27,6 @@
         <tag>HEAD</tag>
     </scm>
 
-    <properties>
-        <!-- miscellaneous -->
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>23</java.version>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
-        <maven.compiler.release>${java.version}</maven.compiler.release>
-
-        <!-- Junit version -->
-        <junit>5.11.3</junit>
-
-        <!-- Plugin versions -->
-        <maven.surefire>3.5.2</maven.surefire>
-    </properties>
-
     <distributionManagement>
         <repository>
             <id>github-repo</id>
@@ -61,6 +46,21 @@
             </snapshots>
         </repository>
     </repositories>
+
+    <properties>
+        <!-- miscellaneous -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>23</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.release>${java.version}</maven.compiler.release>
+
+        <!-- Junit version -->
+        <junit>5.11.3</junit>
+
+        <!-- Plugin versions -->
+        <maven.surefire>3.5.2</maven.surefire>
+    </properties>
 
     <dependencies>
         <!-- Dependencies -->

@@ -66,4 +66,9 @@ public class PasswordLengthValidator implements PasswordValidator {
             return new ValidationResult(false, "Password must be longer than " + MIN_LENGTH + " characters.");
         }
     }
+
+    @Override
+    public String prompt() {
+        return "Try a password: ";
+    }
 }

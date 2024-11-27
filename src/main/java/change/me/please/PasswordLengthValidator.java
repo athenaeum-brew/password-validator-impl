@@ -69,6 +69,6 @@ public class PasswordLengthValidator implements PasswordValidator {
 
     @Override
     public String prompt() {
-        return "Try a password: ";
+        return "(prompt from the impl) Try a password: ";
     }
 }

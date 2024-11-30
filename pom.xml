@@ -140,11 +140,6 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <destDir>${project.build.directory}/site/apidocs</destDir>
-                    <showAuthor>true</showAuthor>
-                    <showVersion>true</showVersion>
-                </configuration>
             </plugin>
         </plugins>
     </build>

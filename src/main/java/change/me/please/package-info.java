@@ -1,5 +1,6 @@
 /**
- * Classes implementationg {@link PasswordValidator}
+ * Classes implementationg
+ * {@link com.cthiebaud.passwordvalidator.PasswordValidator}
  * 
  * CHANGE ME! PLEASE!
  */

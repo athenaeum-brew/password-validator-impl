@@ -61,7 +61,7 @@ public class PasswordLengthValidator implements PasswordValidator {
         }
 
         if (potentialPassword.length() >= MIN_LENGTH) {
-            return new ValidationResult(true, "Password length is valid.");
+            return new ValidationResult(true, null); // the message may be null
         } else {
             return new ValidationResult(false, "Password must be longer than " + MIN_LENGTH + " characters.");
         }
@@ -69,6 +69,6 @@ public class PasswordLengthValidator implements PasswordValidator {
 
     @Override
     public String prompt() {
-        return "(prompt from the impl) Try a password: ";
+        return "Try a password: ";
     }
 }

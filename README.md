@@ -21,7 +21,7 @@ public class PasswordLengthValidator implements PasswordValidator {
     @Override
     public ValidationResult validate(String potentialPassword) {
         if (potentialPassword.length() >= MIN_LENGTH) {
-            return new ValidationResult(true, "Password length is valid.");
+            return new ValidationResult(true, null);
         } else {
             return new ValidationResult(false, "Password must be longer than " + MIN_LENGTH + " characters.");
         }

@@ -15,7 +15,7 @@ class PasswordLengthValidatorTest {
     void testValidPassword() {
         ValidationResult result = validator.validate("validPassword123");
         assertTrue(result.isValid());
-        assertEquals("Password length is valid.", result.message());
+        assertNull(result.message());
     }
 
     @Test

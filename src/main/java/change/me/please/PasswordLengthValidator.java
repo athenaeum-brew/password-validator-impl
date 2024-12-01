@@ -35,8 +35,15 @@ public class PasswordLengthValidator implements PasswordValidator {
      * The minimum length required for a valid password.
      */
     private static final int MIN_LENGTH = 8;
+    /**
+     * The maximum trials
+     */
+    private static final int MAX_TRIALS = 3;
 
-    int count = 0;
+    /**
+     * The counter for trials
+     */
+    int trials = 0;
 
     /**
      * Validates whether the given password meets the minimum length requirement.
@@ -58,6 +65,10 @@ public class PasswordLengthValidator implements PasswordValidator {
      */
     @Override
     public ValidationResult validate(String potentialPassword) {
+        if (++trials > MAX_TRIALS) {
+            getExitHandler().exit(-2); // Use the default ExitHandler provided by the interface
+        }
+
         if (potentialPassword == null) {
             throw new IllegalArgumentException("The password to validate cannot be null.");
         }
@@ -71,6 +82,6 @@ public class PasswordLengthValidator implements PasswordValidator {
 
     @Override
     public String prompt() {
-        return count++ + " Try a password: ";
+        return trials + "/" + MAX_TRIALS + " Try a password: ";
     }
 }

@@ -65,23 +65,34 @@ public class PasswordLengthValidator implements PasswordValidator {
      */
     @Override
     public ValidationResult validate(String potentialPassword) {
-        if (++trials > MAX_TRIALS) {
-            getExitHandler().exit(-2); // Use the default ExitHandler provided by the interface
-        }
+        try {
+            // System.out.printf("%d / %d", trials, MAX_TRIALS);
+            if (MAX_TRIALS <= trials) {
+                var eh = getExitHandler();
+                eh.exit(-2); // Use the default ExitHandler provided by the interface
+            }
 
-        if (potentialPassword == null) {
-            throw new IllegalArgumentException("The password to validate cannot be null.");
-        }
+            if (potentialPassword == null) {
+                throw new IllegalArgumentException("The password to validate cannot be null.");
+            }
 
-        if (potentialPassword.length() >= MIN_LENGTH) {
-            return new ValidationResult(true, null); // the message may be null
-        } else {
-            return new ValidationResult(false, "Password must be longer than " + MIN_LENGTH + " characters.");
+            if (potentialPassword.length() >= MIN_LENGTH) {
+                return new ValidationResult(true, null); // the message may be null
+            } else {
+                return new ValidationResult(false, "Password must be longer than " + MIN_LENGTH + " characters.");
+            }
+        } finally {
+            trials++;
         }
     }
 
     @Override
     public String prompt() {
-        return trials + "/" + MAX_TRIALS + " Try a password: ";
+        if (MAX_TRIALS <= trials) {
+            var eh = getExitHandler();
+            eh.exit(-2);
+        }
+        return String.format("[%d/%d] Try a password: ", trials + 1, MAX_TRIALS);
     }
+
 }

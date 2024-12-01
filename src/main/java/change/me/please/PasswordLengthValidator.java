@@ -57,7 +57,7 @@ public class PasswordLengthValidator implements PasswordValidator {
     @Override
     public ValidationResult validate(String potentialPassword) {
         if (potentialPassword == null) {
-            return new ValidationResult(false, "The password to validate cannot be null.");
+            throw new IllegalArgumentException("The password to validate cannot be null.");
         }
 
         if (potentialPassword.length() >= MIN_LENGTH) {

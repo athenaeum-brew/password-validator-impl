@@ -36,6 +36,8 @@ public class PasswordLengthValidator implements PasswordValidator {
      */
     private static final int MIN_LENGTH = 8;
 
+    int count = 0;
+
     /**
      * Validates whether the given password meets the minimum length requirement.
      * <p>
@@ -69,6 +71,6 @@ public class PasswordLengthValidator implements PasswordValidator {
 
     @Override
     public String prompt() {
-        return "Try a password: ";
+        return count++ + " Try a password: ";
     }
 }

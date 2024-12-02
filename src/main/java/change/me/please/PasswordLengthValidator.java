@@ -46,6 +46,12 @@ public class PasswordLengthValidator implements PasswordValidator {
     int trials = 0;
 
     /**
+     * Default constructor for the {@code PasswordLengthValidator} class.
+     */
+    public PasswordLengthValidator() {
+    }
+
+    /**
      * Validates whether the given password meets the minimum length requirement.
      * <p>
      * A password is considered valid if its length is greater than or equal to

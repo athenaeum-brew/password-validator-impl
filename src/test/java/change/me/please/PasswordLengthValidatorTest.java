@@ -13,7 +13,7 @@ class PasswordLengthValidatorTest {
 
     @Test
     void testValidPassword() {
-        ValidationResult result = validator.validate("validPassword123");
+        ValidationResult result = validator.validate("longenough");
         assertTrue(result.isValid());
         assertNull(result.message());
     }
@@ -22,7 +22,8 @@ class PasswordLengthValidatorTest {
     void testInvalidPassword() {
         ValidationResult result = validator.validate("short");
         assertFalse(result.isValid());
-        assertEquals("Password must be longer than 8 characters.", result.message());
+        String regex = "^Password must be longer than \\d+ characters.*";
+        assertTrue(result.message().matches(regex), "Message should match the expected pattern");
     }
 
 }

@@ -12,10 +12,11 @@ import com.cthiebaud.passwordvalidator.*;
 class PasswordLengthValidatorMaxTrialsTest {
 
     private PasswordValidator validator;
-    private final int[] exitStatus = { Integer.MIN_VALUE };
+
     // Using an array to allow modification inside the mock ExitHandler, as
     // lambda expressions and anonymous classes can only capture final or
     // effectively final variables.
+    private final int[] exitStatus = { Integer.MIN_VALUE };
 
     @BeforeEach
     void setUp() {
@@ -37,7 +38,7 @@ class PasswordLengthValidatorMaxTrialsTest {
     }
 
     @Test
-    void testDefaultExitHandler() {
+    void testMaxTrialsFails() {
         // Simulate MAX_TRIALS reached
         for (int i = 0; i <= 3; i++) {
             validator.validate("short");

@@ -69,7 +69,8 @@ public class PasswordLengthValidator implements PasswordValidator {
             // System.out.printf("%d / %d", trials, MAX_TRIALS);
             if (MAX_TRIALS <= trials) {
                 var eh = getExitHandler();
-                eh.exit(-2); // Use the default ExitHandler provided by the interface
+                if (eh != null)
+                    eh.exit(-2);
             }
 
             if (potentialPassword == null) {
@@ -77,9 +78,11 @@ public class PasswordLengthValidator implements PasswordValidator {
             }
 
             if (potentialPassword.length() >= MIN_LENGTH) {
-                return new ValidationResult(true, null); // the message may be null
+                return new ValidationResult(true, null);
             } else {
-                return new ValidationResult(false, "Password must be longer than " + MIN_LENGTH + " characters.");
+                return new ValidationResult(false,
+                        String.format("Password must be longer than %d characters. %d remaining tentative(s).",
+                                MIN_LENGTH, trials));
             }
         } finally {
             trials++;
@@ -90,7 +93,8 @@ public class PasswordLengthValidator implements PasswordValidator {
     public String prompt() {
         if (MAX_TRIALS <= trials) {
             var eh = getExitHandler();
-            eh.exit(-2);
+            if (eh != null)
+                eh.exit(-2);
         }
         return String.format("[%d/%d] Try a password: ", trials + 1, MAX_TRIALS);
     }

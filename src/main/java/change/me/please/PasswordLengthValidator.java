@@ -80,9 +80,15 @@ public class PasswordLengthValidator implements PasswordValidator {
             if (potentialPassword.length() >= MIN_LENGTH) {
                 return new ValidationResult(true, null);
             } else {
-                return new ValidationResult(false,
-                        String.format("Password must be longer than %d characters. %d remaining tentative(s).",
-                                MIN_LENGTH, trials));
+                int remainingTrials = MAX_TRIALS - 1 - trials;
+
+                String feedbackMessage = (remainingTrials == 0)
+                        ? String.format("Password must be longer than %d characters. Bye.", MIN_LENGTH)
+                        : String.format("Password must be longer than %d characters. %d remaining tentative%s.",
+                                MIN_LENGTH,
+                                remainingTrials,
+                                remainingTrials == 1 ? "" : "s");
+                return new ValidationResult(false, feedbackMessage);
             }
         } finally {
             trials++;

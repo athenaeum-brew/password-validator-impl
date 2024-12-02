@@ -67,7 +67,8 @@ public class PasswordLengthValidator implements PasswordValidator {
      *         than
      *         {@value #MIN_LENGTH} characters.</li>
      *         </ul>
-     * @throws NullPointerException if {@code potentialPassword} is {@code null}.
+     * @throws {@link IllegalArgumentException} if {@code potentialPassword} is
+     *                {@code null}.
      */
     @Override
     public ValidationResult validate(String potentialPassword) {

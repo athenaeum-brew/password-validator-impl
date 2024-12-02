@@ -57,7 +57,7 @@ This project depends on the [password-validator](https://github.com/athenaeum-br
 <dependency>
     <groupId>com.cthiebaud</groupId>
     <artifactId>password-validator</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
@@ -68,9 +68,6 @@ This project depends on the [password-validator](https://github.com/athenaeum-br
 ```xml
 <scm>
     <url>https://github.com/athenaeum-brew/password-validator-impl</url>
-    <connection>scm:git:https://github.com/athenaeum-brew/password-validator-impl.git</connection>
-    <developerConnection>scm:git:git@github.com:athenaeum-brew/password-validator-impl.git</developerConnection>
-    <tag>HEAD</tag>
 </scm>
 ```
 
@@ -82,7 +79,6 @@ This project depends on the [password-validator](https://github.com/athenaeum-br
         <id>cthiebaud</id>
         <name>Christophe Thiebaud</name>
         <email>christophe.t60@gmail.com</email>
-        <url>https://github.com/cthiebaud</url>
     </developer>
 </developers>
 ```
